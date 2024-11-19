@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  color-scheme: light dark;
+}
+
+:root.dark-theme {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --primary-color: #2980b9;
+  --secondary-color: #27ae60;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+}
